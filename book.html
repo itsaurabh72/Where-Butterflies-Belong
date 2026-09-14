@@ -32,13 +32,14 @@ img{
 
 button{
     background:#111;
-    color:white;
+    color:#fff;
     border:none;
     padding:14px 30px;
     border-radius:12px;
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
+    transition:.25s;
 }
 
 button:hover{
@@ -47,8 +48,8 @@ button:hover{
 
 button:disabled{
     background:#666;
-    cursor:not-allowed;
     opacity:.7;
+    cursor:not-allowed;
 }
 </style>
 
@@ -59,15 +60,20 @@ button:disabled{
 <img id="pageImage" src="Beige Aesthetic Motivational Instagram Post _20260903_094809_0000.png">
 
 <div class="buttons">
-<button id="prevBtn" disabled>← Previous</button>
+<button id="prevBtn">← Previous</button>
 <button id="nextBtn">Next →</button>
 </div>
 
 <script>
 
 const pages = [
+
 "Beige Aesthetic Motivational Instagram Post _20260903_094809_0000.png",
-"Clean Modern Photo Article Page A4 Document_20260904_123444_0000.png"
+
+"Clean Modern Photo Article Page A4 Document_20260904_123444_0000.png",
+
+"Black and White Photo Collage Magazine Page A4 Documnet_20260903_160024_0000.png"
+
 ];
 
 let currentPage = 0;
@@ -85,7 +91,7 @@ next.disabled = currentPage===pages.length-1;
 
 }
 
-prev.onclick = ()=>{
+prev.onclick = function(){
 
 if(currentPage>0){
 
@@ -94,9 +100,9 @@ updatePage();
 
 }
 
-};
+}
 
-next.onclick = ()=>{
+next.onclick = function(){
 
 if(currentPage<pages.length-1){
 
@@ -105,7 +111,7 @@ updatePage();
 
 }
 
-};
+}
 
 updatePage();
 
