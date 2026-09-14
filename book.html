@@ -1,71 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where Butterflies Belong</title>
-
-<style>
-body{
-    margin:0;
-    background:#000;
-    text-align:center;
-    font-family:Arial,sans-serif;
-}
-
-img{
-    width:100%;
-    max-width:900px;
-    height:auto;
-    display:block;
-    margin:auto;
-}
-
-.buttons{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    max-width:900px;
-    margin:20px auto;
-    padding:0 15px 25px;
-}
-
-button{
-    background:#111;
-    color:#fff;
-    border:none;
-    padding:14px 30px;
-    border-radius:12px;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.25s;
-}
-
-button:hover{
-    background:#333;
-}
-
-button:disabled{
-    background:#666;
-    opacity:.7;
-    cursor:not-allowed;
-}
-</style>
-
-</head>
-
-<body>
-
-<img id="pageImage" src="Beige Aesthetic Motivational Instagram Post _20260903_094809_0000.png">
-
-<div class="buttons">
-<button id="prevBtn">← Previous</button>
-<button id="nextBtn">Next →</button>
-</div>
-
-<script>
-
 const pages = [
 
 "Beige Aesthetic Motivational Instagram Post _20260903_094809_0000.png",
@@ -76,39 +8,8 @@ const pages = [
 
 "Black and White Photo Collage Magazine Page A4 Documnet_20260903_164450_0000.png",
 
-"Black and White Photo Collage Magazine Page A4 Documnet_20260903_171045_0000.png"
+"Black and White Photo Collage Magazine Page A4 Documnet_20260903_171045_0000.png",
+
+"Black and White Photo Collage Magazine Page A4 Documnet_20260903_174618_0000.png"
 
 ];
-
-let currentPage = 0;
-
-const image = document.getElementById("pageImage");
-const prev = document.getElementById("prevBtn");
-const next = document.getElementById("nextBtn");
-
-function updatePage(){
-image.src = pages[currentPage];
-prev.disabled = currentPage===0;
-next.disabled = currentPage===pages.length-1;
-}
-
-prev.onclick = function(){
-if(currentPage>0){
-currentPage--;
-updatePage();
-}
-}
-
-next.onclick = function(){
-if(currentPage<pages.length-1){
-currentPage++;
-updatePage();
-}
-}
-
-updatePage();
-
-</script>
-
-</body>
-</html>
