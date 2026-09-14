@@ -74,7 +74,9 @@ const pages = [
 
 "Black and White Photo Collage Magazine Page A4 Documnet_20260903_160024_0000.png",
 
-"Black and White Photo Collage Magazine Page A4 Documnet_20260903_164450_0000.png"
+"Black and White Photo Collage Magazine Page A4 Documnet_20260903_164450_0000.png",
+
+"Black and White Photo Collage Magazine Page A4 Documnet_20260903_171045_0000.png"
 
 ];
 
@@ -85,34 +87,23 @@ const prev = document.getElementById("prevBtn");
 const next = document.getElementById("nextBtn");
 
 function updatePage(){
-
 image.src = pages[currentPage];
-
 prev.disabled = currentPage===0;
 next.disabled = currentPage===pages.length-1;
-
 }
 
 prev.onclick = function(){
-
 if(currentPage>0){
-
 currentPage--;
 updatePage();
-
 }
-
 }
 
 next.onclick = function(){
-
 if(currentPage<pages.length-1){
-
 currentPage++;
 updatePage();
-
 }
-
 }
 
 updatePage();
